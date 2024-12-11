@@ -1,0 +1,17 @@
+.BMI-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    background-color: #49008d;
+    border: 2px solid #400069;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

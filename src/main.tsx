@@ -8,23 +8,27 @@ import {
 } from "react-router-dom";
 import App from './App.tsx';
 import Calculator from './components/Calculator';
-// import BMI from './components/BMI/index.tsx';
+import BMI from './components/BMI';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <BrowserRouter>
-                <Routes>
-                    <Route
-                        
-                        path="/"
-                        element={<App />}
-                    />
-                    <Route
-                        
-                        path="/calculator"
-                        element={<Calculator />}
-                    />
-                </Routes>
-            </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route
+
+          path="/"
+          element={<App />}
+        />
+        <Route
+
+          path="/calculator"
+          element={<Calculator />}
+        />
+        <Route
+          path='/BMI'
+          element={<BMI />}
+        />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
 )
