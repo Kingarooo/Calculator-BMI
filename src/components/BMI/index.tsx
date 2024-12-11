@@ -1,12 +1,13 @@
 import { useState } from "react"
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 function BMI(): JSX.Element {
 
     const [bmiResult, setBmiResult] = useState("");
     const [height, setHeight] = useState(0);
     const [weight, setWeight] = useState(0);
-
+    const navigate = useNavigate();
     const sendBMItoServer = async () => {
         if (height && weight) {
             try {
@@ -30,6 +31,7 @@ function BMI(): JSX.Element {
                 //if i have a BMI
                 <>
                     <p>{bmiResult}</p>
+                    <button onClick={() => navigate('/')}>Home</button>
                 </>
                 //else
                 :
